@@ -26,15 +26,14 @@ function makeHtml(characters) {
   const markup = characters
     .map((character) => {
       return `<li class="news-item">
-    <img src="${character.image}" />
-    <h1>${character.name}</h1>
-    <p>${character.species}</p>
-    <p>${character.status}</p>
+    <img class="news-list-photo" src="${character.image}" />
+    <h1 class="news-list-name">${character.name}</h1>
+    <p class="news-list-species">${character.species}</p>
+    <p class="news-list-status">${character.status}</p>
     </li>`;
     })
-    .join();
+    .join('');
 
-  //   newsList.innerHTML = markup;
   newsList.insertAdjacentHTML("beforeend", markup);
 }
 
